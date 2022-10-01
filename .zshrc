@@ -6,9 +6,9 @@ fpath+=~/.zfunc
 # Enable completions
 autoload -Uz compinit && compinit
 
-source .aliases
-source .exports
-source .functions
+source $HOME/.aliases
+source $HOME/.exports
+source $HOME/.functions
 
 # Minimal - Theme Settings
 # export MNML_INSERT_CHAR="$"
@@ -92,3 +92,4 @@ gpgconf --launch gpg-agent
 eval "$(starship init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+typeset -U PATH
