@@ -152,4 +152,5 @@ alias path='echo -e ${PATH//:/\\n}'
 alias curls="curl --user-agent \"Mozilla/5.0 (Windows NT 10.0; rv:105.0) Gecko/20100101 Firefox/105.0\""
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias pushdot="dotfiles commit -a -S -m 'auto update'; dotfiles push"
+alias dotup="dotfiles commit -a -S -m 'auto update'; dotfiles push"
+alias deq="xattr -r -d com.apple.quarantine"
