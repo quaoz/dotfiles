@@ -90,6 +90,10 @@ source $ZSH/oh-my-zsh.sh
 gpgconf --launch gpg-agent
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 typeset -U PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
