@@ -11,10 +11,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+|2,0,1666281970,,"q"
 :q!
 |2,0,1651085985,,"q!"
-:q
-|2,0,1651085981,,"q"
 :qa
 |2,0,1649088471,,"qa"
 :;q
@@ -47,12 +47,28 @@
 # Jumplist (newest first):
 -'  7  0  ~/IdeaProjects/IA/.git/MERGE_MSG
 |4,39,7,0,1651085985,"~/IdeaProjects/IA/.git/MERGE_MSG"
+-'  7  0  ~/IdeaProjects/IA/.git/MERGE_MSG
+|4,39,7,0,1651085985,"~/IdeaProjects/IA/.git/MERGE_MSG"
+-'  1  0  ~/IdeaProjects/IA/.git/MERGE_MSG
+|4,39,1,0,1651085942,"~/IdeaProjects/IA/.git/MERGE_MSG"
 -'  1  0  ~/IdeaProjects/IA/.git/MERGE_MSG
 |4,39,1,0,1651085942,"~/IdeaProjects/IA/.git/MERGE_MSG"
 -'  1  0  /private/tmp/crontab.byslhK9Wm9
 |4,39,1,0,1650120495,"/private/tmp/crontab.byslhK9Wm9"
 -'  1  0  /private/tmp/crontab.byslhK9Wm9
 |4,39,1,0,1650120495,"/private/tmp/crontab.byslhK9Wm9"
+-'  1  0  /private/tmp/crontab.byslhK9Wm9
+|4,39,1,0,1650120495,"/private/tmp/crontab.byslhK9Wm9"
+-'  1  0  /private/tmp/crontab.byslhK9Wm9
+|4,39,1,0,1650120495,"/private/tmp/crontab.byslhK9Wm9"
+-'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
+|4,39,1,0,1650120481,"/private/tmp/crontab.5JZ0ZU7rzg"
+-'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
+|4,39,1,0,1650120481,"/private/tmp/crontab.5JZ0ZU7rzg"
+-'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
+|4,39,1,0,1650120481,"/private/tmp/crontab.5JZ0ZU7rzg"
+-'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
+|4,39,1,0,1650120481,"/private/tmp/crontab.5JZ0ZU7rzg"
 -'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
 |4,39,1,0,1650120481,"/private/tmp/crontab.5JZ0ZU7rzg"
 -'  1  0  /private/tmp/crontab.5JZ0ZU7rzg
@@ -77,6 +93,54 @@
 |4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
 -'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
 |4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.dotfiles/.git/COMMIT_EDITMSG
+|4,39,1,0,1649088471,"~/.dotfiles/.git/COMMIT_EDITMSG"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
+-'  1  0  /private/tmp/crontab.OCxvoBxrAM
+|4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
 -'  1  0  /private/tmp/crontab.OCxvoBxrAM
 |4,39,1,0,1646071399,"/private/tmp/crontab.OCxvoBxrAM"
 -'  1  0  /private/tmp/crontab.OCxvoBxrAM
@@ -179,72 +243,6 @@
 |4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
 -'  6  0  ~/.dotfiles/.git/MERGE_MSG
 |4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  6  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,6,0,1644682916,"~/.dotfiles/.git/MERGE_MSG"
--'  1  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,1,0,1644682887,"~/.dotfiles/.git/MERGE_MSG"
--'  1  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,1,0,1644682887,"~/.dotfiles/.git/MERGE_MSG"
--'  1  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,1,0,1644682887,"~/.dotfiles/.git/MERGE_MSG"
--'  1  0  ~/.dotfiles/.git/MERGE_MSG
-|4,39,1,0,1644682887,"~/.dotfiles/.git/MERGE_MSG"
 
 # History of marks within files (newest to oldest):
 
