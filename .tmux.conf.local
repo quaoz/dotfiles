@@ -239,7 +239,7 @@ setw -g window-status-current-format "#[fg=$tmux_conf_theme_status_bg,bg=$thm_st
 
 # -- tpm -----------------------------------------------------------------------
 
-set-environment -g TMUX_PLUGIN_MANAGER_PATH "$XDG_DATA_HOME/tmux/plugins"
+set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/,tmux/plugins"
 
 tmux_conf_update_plugins_on_launch=true
 tmux_conf_update_plugins_on_reload=true
