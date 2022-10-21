@@ -32,6 +32,8 @@ export HOMEBREW_NO_ANALYTICS=1
 export POWERSHELL_TELEMETRY_OPTOUT=1
 export VCPKG_DISABLE_METRICS=1
 
+export ZSH_TMUX_AUTOSTART=true
+
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 
 # fzf configs

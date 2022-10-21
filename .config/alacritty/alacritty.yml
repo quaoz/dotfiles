@@ -41,7 +41,7 @@ window:
 
 scrolling:
   history: 100000
-  multiplier: 5
+  multiplier: 1
 
 font:
   normal:
