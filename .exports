@@ -43,7 +43,7 @@ if hash fzf 2>/dev/null; then
     --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
   if hash fd 2>/dev/null; then
-    export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
+    export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow'
 
     _fzf_compgen_path() {
       fd --hidden --follow . "$1"

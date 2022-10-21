@@ -198,7 +198,7 @@ tmux_conf_theme_clock_style="12"
 #   - disabled
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
@@ -206,18 +206,28 @@ tmux_conf_copy_to_os_clipboard=false
 
 # Keybindings
 
-unbind -
-unbind -n C-l
-bind _ split-window -v
-bind | split-window -h
+#unbind -
+#unbind -n C-l
+#bind _ split-window -v
+#bind | split-window -h
 bind R respawn-pane -k \; display 'Pane respawned' \; run 'sleep 0.2' \; clear-history # reload pane
 
 # increase history size
 set -g history-limit 10000
 
 # force Vi mode
-set -g status-keys vi
-set -g mode-keys vi
+#set -g status-keys vi
+#set -g mode-keys vi
+
+set -g mouse on
+set -g renumber-windows on
+setw -g aggressive-resize on
+
+# pane movement shortcuts
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 
 setw -g automatic-rename-format "#{=/-13/..:pane_title}"
 set -g pane-border-status off
