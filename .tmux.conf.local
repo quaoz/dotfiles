@@ -32,7 +32,7 @@ tmux_conf_24b_colour=true
 tmux_conf_theme_window_fg="default"
 tmux_conf_theme_window_bg="default"
 
-tmux_conf_theme_highlight_focused_pane=true
+tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
 tmux_conf_theme_focused_pane_bg="$thm_surface1"
