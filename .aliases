@@ -146,6 +146,8 @@ alias afk="osascript -e 'tell app \"System Events\" to key code 12 using {contro
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
 
+alias restart="znap restart"
+
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
