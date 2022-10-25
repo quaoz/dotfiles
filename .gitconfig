@@ -192,3 +192,8 @@
 	gpgSign = true
 [pull]
 	rebase = false
+[maintenance]
+	repo = /Users/matthewalwan/.zsh-snap/plugins/ohmyzsh
+	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-autocomplete
+	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-autosuggestions
+	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-syntax-highlighting
