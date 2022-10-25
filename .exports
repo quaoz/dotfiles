@@ -9,6 +9,12 @@ else
   export EDITOR='nvim'
 fi
 
+export HYPHEN_INSENSITIVE="true"
+export ENABLE_CORRECTION="true"
+export COMPLETION_WAITING_DOTS="true"
+export HIST_STAMPS="dd/mm/yyyy"
+export ZSH_AUTOSUGGEST_USE_ASYNC="true"
+
 export NODE_REPL_HISTORY=~/.node_history;
 export NODE_REPL_HISTORY_SIZE='32768';
 export NODE_REPL_MODE='sloppy';

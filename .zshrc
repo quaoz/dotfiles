@@ -1,45 +1,44 @@
+zstyle ':znap:*' repos-dir ~/.zsh-snap/plugins
+source ~/.zsh-snap/znap.zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-fpath+=~/.zfunc
+znap eval starship 'starship init zsh --print-full-init'
+znap prompt
 
-# Enable completions
-autoload -Uz compinit && compinit
-
-source $HOME/.aliases
 source $HOME/.exports
+source $HOME/.aliases
 source $HOME/.functions
 
-HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="dd/mm/yyyy"
-ZSH_AUTOSUGGEST_USE_ASYNC=true
+znap source marlonrichert/zsh-autocomplete
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-syntax-highlighting
 
-plugins=( 
-    git
-    rust
-    tmux
-    sudo
-    zsh-autosuggestions
-    fzf
-)
+znap source ohmyzsh/ohmyzsh plugins/git
+znap source ohmyzsh/ohmyzsh plugins/tmux
+znap source ohmyzsh/ohmyzsh plugins/fzf
+znap source ohmyzsh/ohmyzsh plugins/pipenv
+
+source $ZSH/oh-my-zsh.sh
+
+znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+znap eval zoxide 'zoxide init zsh'
+
+znap fpath _rustup  'rustup  completions zsh'
+znap fpath _cargo   'rustup  completions zsh cargo'
+
+znap function _pipenv pipenv
+compdef       _pipenv pipenv
+
+fpath+=~/.zfunc
 
 # add brew completions path to fpath
 if hash brew 2>/dev/null; then
   fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
 fi
 
-source $ZSH/oh-my-zsh.sh
-
 gpgconf --launch gpg-agent
-
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 typeset -U PATH fpath
 export PATH
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
