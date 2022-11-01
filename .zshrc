@@ -42,3 +42,5 @@ gpgconf --launch gpg-agent
 
 typeset -U PATH fpath
 export PATH
+
+znap source ohmyzsh/ohmyzsh plugins/nvm

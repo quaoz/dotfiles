@@ -105,7 +105,7 @@
 	untrackedCache = true
 
 	autocrlf = input
-	editor = nano
+	editor = nvim 
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -197,3 +197,9 @@
 	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-autocomplete
 	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-autosuggestions
 	repo = /Users/matthewalwan/.zsh-snap/plugins/zsh-syntax-highlighting
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
