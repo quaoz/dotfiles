@@ -7,3 +7,6 @@
 [submodule ".nano"]
 	path = .nano
 	url = https://github.com/scopatz/nanorc.git
+[submodule "/Users/matthewalwan/.config/btop/themes"]
+	path = /Users/matthewalwan/.config/btop/themes
+	url = https://github.com/catppuccin/btop.git
