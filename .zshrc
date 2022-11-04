@@ -7,6 +7,7 @@ export ZSH=$HOME/.zsh-snap/plugins/ohmyzsh
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
+znap eval brew '/opt/homebrew/bin/brew shellenv'
 source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.functions
@@ -19,6 +20,7 @@ znap source ohmyzsh/ohmyzsh plugins/git
 znap source ohmyzsh/ohmyzsh plugins/tmux
 znap source ohmyzsh/ohmyzsh plugins/fzf
 znap source ohmyzsh/ohmyzsh plugins/pipenv
+znap source ohmyzsh/ohmyzsh plugins/nvm
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,4 +45,3 @@ gpgconf --launch gpg-agent
 typeset -U PATH fpath
 export PATH
 
-znap source ohmyzsh/ohmyzsh plugins/nvm
