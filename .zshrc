@@ -1,4 +1,11 @@
 zstyle ':znap:*' repos-dir ~/.zsh-snap/plugins
+
+# zsh-autocomplete configs
+zstyle ':autocomplete:*' min-input 1
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:recent-dirs' backend zoxide
+zstyle ':autocomplete:*' ignored-input '(\*\*|..)'
+
 source ~/.zsh-snap/znap.zsh
 
 # Path to your oh-my-zsh installation.
@@ -21,6 +28,7 @@ znap source ohmyzsh/ohmyzsh plugins/tmux
 znap source ohmyzsh/ohmyzsh plugins/fzf
 znap source ohmyzsh/ohmyzsh plugins/pipenv
 znap source ohmyzsh/ohmyzsh plugins/nvm
+znap source ohmyzsh/ohmyzsh plugins/sudo
 
 source $ZSH/oh-my-zsh.sh
 

@@ -47,7 +47,7 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="brew update --quiet; brew upgrade --quiet; brew cleanup --prune=all --quiet; v up -prod; rustup update; znap pull; znap clean; znap compile; znap restart"
+alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update; znap pull; znap restart"
 
 # Updates all pip packages
 alias pipupdate="python3.9 -m pip install --upgrade pip; pip freeze --local | tee ~/pip_before_upgrade.txt; pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
@@ -156,3 +156,7 @@ alias curls="curl --user-agent \"Mozilla/5.0 (Windows NT 10.0; rv:105.0) Gecko/2
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotup="dotfiles commit -a -S -m 'auto update'; dotfiles push"
 alias deq="xattr -r -d com.apple.quarantine"
+
+alias znapcc="znap clean; znap compile; znap restart"
+alias clean="cleanup; emptytrash; brew cleanup --prune=all --quiet; nvm cache clear; znapcc"
+alias maintainence="update; clean"
