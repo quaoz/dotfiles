@@ -11,6 +11,10 @@ source $HOME/.zsh-snap/znap.zsh
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.zsh-snap/plugins/ohmyzsh
 
+clear
+echo
+neofetch
+
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
