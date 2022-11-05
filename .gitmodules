@@ -10,6 +10,6 @@
 [submodule ".config/btop/themes"]
 	path = .config/btop/themes
 	url = https://github.com/catppuccin/btop.git
-[submodule "/Users/matthewalwan/.config/themes/zsh-syntax-highlighting"]
-	path = /Users/matthewalwan/.config/themes/zsh-syntax-highlighting
+[submodule ".config/themes/zsh-syntax-highlighting"]
+	path = .config/themes/zsh-syntax-highlighting
 	url = https://github.com/catppuccin/zsh-syntax-highlighting.git
