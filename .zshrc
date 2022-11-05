@@ -6,7 +6,7 @@ zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:recent-dirs' backend zoxide
 zstyle ':autocomplete:*' ignored-input '(\*\*|..)'
 
-source ~/.zsh-snap/znap.zsh
+source $HOME/.zsh-snap/znap.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.zsh-snap/plugins/ohmyzsh
@@ -19,6 +19,7 @@ source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.functions
 
+source $HOME/.config/themes/zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
@@ -32,7 +33,7 @@ znap source ohmyzsh/ohmyzsh plugins/sudo
 
 source $ZSH/oh-my-zsh.sh
 
-znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+# znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
 znap eval zoxide 'zoxide init zsh'
 
 znap fpath _rustup  'rustup  completions zsh'
@@ -41,7 +42,7 @@ znap fpath _cargo   'rustup  completions zsh cargo'
 znap function _pipenv pipenv
 compdef       _pipenv pipenv
 
-fpath+=~/.zfunc
+fpath+=$HOME/.zfunc
 
 # add brew completions path to fpath
 if hash brew 2>/dev/null; then
