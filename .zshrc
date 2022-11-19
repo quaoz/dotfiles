@@ -1,4 +1,5 @@
 zstyle ':znap:*' repos-dir ~/.zsh-snap/plugins
+zstyle ':omz:plugins:nvm' lazy true
 
 # zsh-autocomplete configs
 zstyle ':autocomplete:*' min-input 1
@@ -19,6 +20,7 @@ znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
 znap eval brew '/opt/homebrew/bin/brew shellenv'
+
 source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.functions
