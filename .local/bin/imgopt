@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo 'Converting images...'
+echo
+
+# Converts all jpg images to png
+find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -print -exec bash -c "printf '{}' 0 | xargs -0 -r mogrify -format png" \; -delete
+
+echo
+echo 'Optimising images...'
+echo
+
+# Optimises the png images
+open -a ImageOptim .
