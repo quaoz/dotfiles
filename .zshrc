@@ -59,4 +59,3 @@ gpgconf --launch gpg-agent
 
 typeset -U PATH fpath
 export PATH
-
