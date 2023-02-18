@@ -47,7 +47,7 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update --quiet; pnpm update -g; npm install -g npm; npm update -g; npm audit fix; znap pull"
+alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update; pnpm update -g; npm install -g npm; npm update -g; znap pull"
 
 # Updates all pip packages
 alias pipupdate="python3 -m pip install --upgrade pip; pip freeze --local | tee ~/pip_before_upgrade.txt; pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
