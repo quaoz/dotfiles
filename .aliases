@@ -47,13 +47,10 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update; znap pull"
+alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update --quiet; pnpm update -g; npm install -g npm; npm update -g; npm audit fix; znap pull"
 
 # Updates all pip packages
 alias pipupdate="python3 -m pip install --upgrade pip; pip freeze --local | tee ~/pip_before_upgrade.txt; pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
-
-# Updates which require sudo to run
-alias needssudoupdates="sudo -- sh -c 'npm install -g npm; npm update -g; npm audit fix; gem update --system; gem update; gem cleanup'"
 
 alias brewfile="brew bundle --file $DOTFILES/Brewfile"
 
@@ -158,9 +155,10 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias deq="xattr -r -d com.apple.quarantine"
 
 alias znapcc="znap clean; znap compile; echo '\nPress y to reload\n'; read -q && echo && znap restart"
-alias clean="cleanup; emptytrash; brew cleanup --prune=all --quiet; nvm cache clear; znapcc"
-alias maintainence="update; clean"
+alias maintainence="update; cleanup; emptytrash; brew cleanup --prune=all --quiet; nvm cache clear; znapcc"
 
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 alias fistory="history | fzf"
+
+alias steam="open -a Steam --args -noverifyfiles"
