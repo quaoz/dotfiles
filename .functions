@@ -4,6 +4,10 @@ function cheat() {
 	curl --user-agent "curl" cheat.sh/"$1";
 }
 
+function md() {
+	pandoc "${1:-README.md}" | lynx -stdin -dump;
+}
+
 function dotup() {
 	dotfiles status;
 	dotfiles commit -a -S -m "$@"; 
