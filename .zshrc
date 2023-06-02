@@ -1,61 +1,84 @@
-zstyle ':znap:*' repos-dir ~/.zsh-snap/plugins
-zstyle ':omz:plugins:nvm' lazy true
+# -*-zsh-*- vim:ft=zsh
 
-# zsh-autocomplete configs
-zstyle ':autocomplete:*' min-input 1
-zstyle ':autocomplete:*' fzf-completion yes
-zstyle ':autocomplete:recent-dirs' backend zoxide
-zstyle ':autocomplete:*' ignored-input '(\*\*|..)'
+# core exports
+export DOTFILES="$HOME/.dotfiles"
+export CONFIG="$HOME/.config"
+export ZNAP="$CONFIG/znap"
+export ZSH="$ZNAP/ohmyzsh/ohmyzsh"
 
-source $HOME/.zsh-snap/znap.zsh
+# push prompt to the bottom of screen
+printf '\n%.0s' {1..$(( $(tput lines) ))}
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.zsh-snap/plugins/ohmyzsh
+# znap
+[[ -r $ZNAP/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git $ZNAP/znap
 
-clear
-echo
-neofetch
+source $ZNAP/znap/znap.zsh
 
+# znap evals
 znap eval starship 'starship init zsh --print-full-init'
-znap prompt
-
 znap eval brew '/opt/homebrew/bin/brew shellenv'
+znap eval zoxide 'zoxide init zsh'
 
+# exports, aliases and functions
 source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.functions
 
-source $HOME/.config/themes/zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
-znap source marlonrichert/zsh-autocomplete
+# opts
+setopt NO_HUP
+setopt NO_BG_NICE
+setopt NO_LIST_BEEP
+
+setopt LOCAL_TRAPS
+setopt LOCAL_OPTIONS
+
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_ALL_DUPS
+
+setopt CORRECT
+setopt COMPLETE_ALIASES
+
+# plugin config
+zstyle ':completion:*' word true
+zstyle ':completion:*' menu select
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-separator ''
+zstyle ':completion:*' extra-verbose true
+zstyle ':completion:*' insert-tab pending
+zstyle ':completion:*' option-stacking true
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion::complete:*' use-cache true
+zstyle ':completion::complete:*' call-command true
+zstyle ':completion:*:descriptions' format %d
+zstyle ':completion:*:git-checkout:*' sort false
+
+zstyle ':omz:lib:directories' aliases no
+
+zstyle ':fzf-tab:*' prefix ''
+zstyle ':fzf-tab:*' single-group prefix color header
+
+zstyle ':fzf-tab:sources' config-directory "$CONFIG/fzf-tab-source"
+
+# plugins
+znap source ohmyzsh/ohmyzsh oh-my-zsh.sh
+znap source Aloxaf/fzf-tab
+znap source Freed-Wu/fzf-tab-source
 znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
+znap source catppuccin/zsh-syntax-highlighting themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+znap source zsh-users/zsh-syntax-highlighting 
 
-znap source ohmyzsh/ohmyzsh plugins/git
-znap source ohmyzsh/ohmyzsh plugins/tmux
-znap source ohmyzsh/ohmyzsh plugins/fzf
-znap source ohmyzsh/ohmyzsh plugins/pipenv
-znap source ohmyzsh/ohmyzsh plugins/nvm
-znap source ohmyzsh/ohmyzsh plugins/sudo
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source $ZSH/oh-my-zsh.sh
-
-# znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
-znap eval zoxide 'zoxide init zsh'
-
-znap fpath _rustup  'rustup  completions zsh'
-znap fpath _cargo   'rustup  completions zsh cargo'
-
-znap function _pipenv pipenv
-compdef       _pipenv pipenv
-
-fpath+=$HOME/.zfunc
-
-# add brew completions path to fpath
-if hash brew 2>/dev/null; then
-  fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
-fi
-
-gpgconf --launch gpg-agent
-
+# path
 typeset -U PATH fpath
 export PATH
