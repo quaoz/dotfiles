@@ -60,6 +60,7 @@ alias deq="xattr -r -d com.apple.quarantine"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias update="brew update --quiet; brew upgrade --quiet; v up -prod; rustup update; pnpm update -g; npm install -g npm; npm update -g; znap pull"
 alias freshen="update; cleanup -a; echo '\nPress y to reload\n'; read -q && echo && reload"
+alias c="tr -d '\n' | pbcopy"
 
 # misc
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -68,5 +69,5 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias flac2mp3="mkdir -p mp3 && fd . -e flac -x ffmpeg -stats -i {} -b:a 320k -map_metadata 0 -id3v2_version 3 mp3/{/}.mp3"
 alias wav2mp3="mkdir -p mp3 && fd . -e wav -x ffmpeg -stats -i {} -vn -ar 44100 -ac 2 -b:a 320k -map_metadata 0 -id3v2_version 3 mp3/{/}.mp3"
 
-alias c="tr -d '\n' | pbcopy"
+alias fistory="history | fzf"
 

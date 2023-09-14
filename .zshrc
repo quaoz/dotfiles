@@ -1,5 +1,7 @@
 # -*-zsh-*- vim:ft=zsh
 
+fpath+=~/.zfunc
+
 # core exports
 export DOTFILES="$HOME/.dotfiles"
 export CONFIG="$HOME/.config"
