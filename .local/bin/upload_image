@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# takes a file path as the argument and uploads it using git returning a direct link to the file
+# configured for github and a git repo called .img-upload located in your home directory
+# works with marktext as a command line script image uploader
+
+# edit depending on usage
+host=https://raw.githubusercontent.com
+dirname=.img-upload
+
+# check directory exists and is a git repo
+gitdir="$HOME"/"$dirname"/
+if [[ ! -d "$gitdir"/.git ]]; then
+	echo "$gitdir/.git does not exist."
+	exit 1
+fi
+cd $gitdir
+
+# returns the subdir depending on the parent process
+function getsubdir() {
+	# get parent process and convert to lower case
+	parent="$(ps -o comm= $PPID | tr '[:upper:]' '[:lower:]')"
+
+	# match against processes
+	for i in marktext; do
+		case "$parent" in
+		*$i*)
+			echo "$i"
+			return 0
+			;;
+		esac
+	done
+
+	echo "general"
+}
+
+subdir="$(getsubdir)"
+if [[ ! -d "$subdir" ]]; then
+	mkdir "$subdir"
+fi
+cd $subdir
+
+# generate file name, format is <md5 hash>-<unix timestamp>.<original extention>
+base="$(basename -- "$1")"
+ext="${base##*.}"
+fname="$(md5 -q "$1")"-"$(date +%s)"."$ext"
+
+cp "$1" "$fname"
+
+# add, commit and push file
+git add "$fname"
+git commit --no-gpg-sign -q -m "Uploaded "$subdir"/"$fname"."
+git push -q
+
+# generate url
+user="$(git config user.name)"
+branch="$(git branch --show-current)"
+url="$host"/"$user"/"$dirname"/"$branch"/"$subdir"/"$fname"
+
+echo "$url"
