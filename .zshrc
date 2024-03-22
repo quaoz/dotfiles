@@ -25,6 +25,7 @@ znap eval zoxide 'zoxide init zsh'
 
 # exports, aliases and functions
 source $HOME/.exports
+source $HOME/.do-not-commit-these-exports
 source $HOME/.aliases
 source $HOME/.functions
 
