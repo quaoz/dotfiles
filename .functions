@@ -1,8 +1,11 @@
-#!/usr/bin/env zsh
 # -*-zsh-*- vim:ft=zsh
 
 function cheat() {
 	curl --user-agent "curl" cheat.sh/"$1";
+}
+
+function mommy() {
+	CARGO_MOMMYS_ACTUAL="$1" cargo-mommy;
 }
 
 function crun() {
