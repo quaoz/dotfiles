@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # -*-zsh-*- vim:ft=zsh
 
 # navigation
@@ -70,4 +71,7 @@ alias flac2mp3="mkdir -p mp3 && fd . -e flac -x ffmpeg -stats -i {} -b:a 320k -m
 alias wav2mp3="mkdir -p mp3 && fd . -e wav -x ffmpeg -stats -i {} -vn -ar 44100 -ac 2 -b:a 320k -map_metadata 0 -id3v2_version 3 mp3/{/}.mp3"
 
 alias fistory="history | fzf"
+
+# :o
+alias cargo="cargo mommy"
 

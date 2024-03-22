@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # -*-zsh-*- vim:ft=zsh
 
 function cheat() {
