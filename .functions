@@ -22,11 +22,9 @@ function md() {
 }
 
 function dotup() {
-	alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
-	dotfiles status;
-	dotfiles commit -a -S -m "$@"; 
-	dotfiles push;
+	git --git-dir=$HOME/.dotfiles --work-tree=$HOME status;
+	git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit -a -S -m "$@"; 
+	git --git-dir=$HOME/.dotfiles --work-tree=$HOME push;
 }
 
 function mkd() {
