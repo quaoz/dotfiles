@@ -55,6 +55,7 @@ done
 # system
 alias :q="exit"
 alias reload="exec ${SHELL} -l"
+alias clear="command clear; printf '\n%.0s' {1..$(($(tput lines)))}"
 alias path="echo -e ${PATH//:/\\n}"
 alias deq="xattr -r -d com.apple.quarantine"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

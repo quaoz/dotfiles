@@ -22,6 +22,8 @@ function md() {
 }
 
 function dotup() {
+	alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
 	dotfiles status;
 	dotfiles commit -a -S -m "$@"; 
 	dotfiles push;

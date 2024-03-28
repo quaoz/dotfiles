@@ -10,7 +10,7 @@ export ZNAP="$CONFIG/znap"
 export ZSH="$ZNAP/ohmyzsh/ohmyzsh"
 
 # push prompt to the bottom of screen
-printf '\n%.0s' {1..$(( $(tput lines) ))}
+printf '\n%.0s' {1..$(($(tput lines)))}
 
 # znap
 [[ -r $ZNAP/znap/znap.zsh ]] ||
@@ -19,8 +19,7 @@ printf '\n%.0s' {1..$(( $(tput lines) ))}
 
 source $ZNAP/znap/znap.zsh
 
-# znap evals
-znap eval starship 'starship init zsh --print-full-init'
+# evals
 znap eval brew '/opt/homebrew/bin/brew shellenv'
 znap eval zoxide 'zoxide init zsh'
 
@@ -83,6 +82,13 @@ znap source zsh-users/zsh-syntax-highlighting
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# starship
+eval "$(starship init zsh --print-full-init)"
+
 # path
 typeset -U PATH fpath
 export PATH
+
+# neofetch
+neofetch
+
