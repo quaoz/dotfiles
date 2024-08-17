@@ -28,10 +28,10 @@ else
     colorflag="-G"
 fi
 
-if type exa &> /dev/null; then
-	alias l="exa -aF --git --icons --sort=type --color=always"
-	alias ll="exa -aFhl --git --icons --sort=type --color=always"
-	alias lsd="exa -aDF --git --icons --sort=type --color=always"
+if type eza &> /dev/null; then
+	alias l="eza --all --classify=auto --git --icons --sort=type --color=always"
+	alias ll="eza --all --classify=auto --header --long --git --icons --sort=type --color=always"
+	alias lsd="eza --all --classify=auto -D --git --icons --sort=type --color=always"
 else
 	alias l="ls -AF ${colorflag}"
 	alias ll="ls -AFhl ${colorflag}"

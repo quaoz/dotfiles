@@ -5,11 +5,17 @@ palette = "catppuccin_mocha"
 [character]
 success_symbol = "[[󱢠](green) ❯](bold lavender)"
 error_symbol = "[[󰴔](red) ❯](bold lavender)"
-vimcmd_symbol = "[❮](green)"
+vimcmd_symbol = "[](green) ❯](bold lavender)"
 
 [directory]
 truncation_length = 4
 style = "bold lavender"
+
+[nix_shell]
+symbol = "❄️ "
+
+[hostname]
+style = "bold green"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

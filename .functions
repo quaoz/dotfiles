@@ -5,12 +5,22 @@ function cheat() {
 }
 
 function mommy() {
-	CARGO_MOMMYS_ACTUAL="$1" cargo-mommy;
+	CARGO_MOMMYS_ACTUAL="$*" cargo-mommy;
 }
 
 function crun() {
     gcc "$@" -Wall -g -Og -lm;
     ./a.out;
+}
+
+function hex2bin() {
+	echo "obase=2; ibase=16; $(tr -d '[:space:]' <<< ${*:u})" | bc | gsed -z 's/\\\n//g';
+}
+
+function show() {
+	magick $1 -scale 1820x1820 /tmp/tmp.png;
+	kitty +kitten icat /tmp/tmp.png;
+	rm /tmp/tmp.png;
 }
 
 function ntfs-mount() {

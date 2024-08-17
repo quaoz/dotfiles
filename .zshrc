@@ -92,3 +92,5 @@ export PATH
 # neofetch
 neofetch
 
+
+[ -f "/Users/matthewalwan/.ghcup/env" ] && . "/Users/matthewalwan/.ghcup/env" # ghcup-env
